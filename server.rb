@@ -16,7 +16,7 @@ class Server < Sinatra::Base
   end
 
   get '/' do
-    erb File.read('index.html.erb')
+    erb File.read('public/index.html.erb')
   end
 
 end
