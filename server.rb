@@ -4,6 +4,7 @@ require 'sinatra/flash'
 require 'sinatra/redirect_with_flash'
 
 class Server < Sinatra::Base
+  set :session_secret, 'super secret'
   enable :sessions
   register Sinatra::Flash
   helpers Sinatra::RedirectWithFlash
